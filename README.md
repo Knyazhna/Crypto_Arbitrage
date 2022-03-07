@@ -10,7 +10,17 @@ Include a Technologies section that describes any programming languages, librari
 ---
 
 ## Installation Guide
-In the Installation Guide section, provide detailed installation instructions. Include any required code and relevant screenshots.
+
+Before running the application first install the following dependencies.
+
+```#conda
+```
+conda install pandas
+
+```import pandas as pd
+from pathlib import Path
+%matplotlib inline
+```
 
 ---
 
