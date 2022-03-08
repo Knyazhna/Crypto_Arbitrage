@@ -1,3 +1,4 @@
+![Crypto Arbitrage](./Crypto Arb.jpeg)
 # Crypto Arbitrage
 Project Title and Description
 Every readme file should have a title followed by a description of the project. Describe the purpose of your project and the problem that inspired you to create it. This description should make it clear how others can use your project.
@@ -32,7 +33,7 @@ The Usage section should include screenshots, code blocks, or animations explain
 
 * Brought to you by Olga Koryachek.
 * Email: olgakoryachek@live.com
-* [LinkedIn](https://www.linkedin.com/in/olga-koryachek-a74b1877/?msgOverlay=true)
+* [LinkedIn](https://www.linkedin.com/in/olga-koryachek-a74b1877/?msgOverlay=true "LinkedIn")
 
 
 ---
