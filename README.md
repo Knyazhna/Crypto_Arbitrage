@@ -1,31 +1,65 @@
-![Crypto Arbitrage](./Crypto Arb.jpeg)
 # Crypto Arbitrage
-Project Title and Description
-Every readme file should have a title followed by a description of the project. Describe the purpose of your project and the problem that inspired you to create it. This description should make it clear how others can use your project.
+In Module 3 Challange assigment our task is to apply the three phases of financial analysis to determine if any arbitrage opportunities exist for Bitcoin. <br>Three phases are **Collect, Prepare, Analyze**. <br>We will sort through historical trade data for Bitcoin on two exchanges to find those opportunities: *Bitstamp* and *Coinbase*. 
 
 ---
 
 ## Technologies
-Include a Technologies section that describes any programming languages, libraries, frameworks, and operating systems that your project requires. Be sure to include the specific versions of any critical dependencies that the current, or production, version of your project uses.
+Crypto Arbitrage project leverages python 3.7 with the following packages:
+
+[Pandas](https://github.com/pandas-dev/pandas "Pandas") -
+For the analysis/manipulation of two provided dataframes. 
+
+We will use [Pandas](https://github.com/pandas-dev/pandas "Pandas") for handling [missing data](https://pandas.pydata.org/pandas-docs/stable/user_guide/missing_data.html), [removing duplicates](https://pandas.pydata.org/pandas-docs/stable/user_guide/duplicates.html), [slicing](https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#slicing-ranges), [chart visualization](https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html), and much more.
 
 ---
 
 ## Installation Guide
 
-Before running the application first install the following libraries and dependencies.
-```conda
+First install the following libraries and dependencies.
+
+```
+# conda
 conda install pandas
 ```
 
-```import pandas as pd
+```
+import pandas as pd
 from pathlib import Path
 %matplotlib inline
 ```
 
+
 ---
 
 ## Usage
-The Usage section should include screenshots, code blocks, or animations explaining how to use your project.
+
+**1.Collect the data**
+<br>
+First we need to import two dataframes and we will do this by using `read_csv` function from pandas.
+```
+bitstamp = pd.read_csv(
+    Path("./Resources/bitstamp.csv"),
+    index_col="Timestamp",
+    parse_dates=True,
+    infer_datetime_format=True
+    )
+```
+**2.Prepare**
+<br>
+To prepare and clean the data we will use `isnull`,` dropna`, `duplicated`, `str.replace` functions.
+```
+bitstamp.isnull().sum()
+
+bitstamp.dropna(inplace=True)
+
+bitstamp.duplicated().sum()
+```
+**3.Analyze**
+<br>
+Finally by using the Pandas `plot` function, we will create the visualization for the Bitstamp and Coinbase DataFrame. 
+
+![Bitstamp and Coinbase: January 2018](January%202018.png)
+![Bitstamp and Coinbase: March 2018](March%202018.png)
 
 ---
 
