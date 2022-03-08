@@ -11,11 +11,10 @@ Include a Technologies section that describes any programming languages, librari
 
 ## Installation Guide
 
-Before running the application first install the following dependencies.
-
-```#conda
-```
+Before running the application first install the following libraries and dependencies.
+```conda
 conda install pandas
+```
 
 ```import pandas as pd
 from pathlib import Path
